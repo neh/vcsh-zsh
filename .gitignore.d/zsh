@@ -1,0 +1,10 @@
+*
+!/.zsh
+!/.zshenv
+!/.zsh/functions
+!/.zsh/functions/bhs
+!/.zsh/functions/bhsc
+!/.zsh/functions/cdw
+!/.zshrc
+!/.gitignore.d
+!/.gitignore.d/zsh

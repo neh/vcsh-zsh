@@ -65,6 +65,7 @@ export GOPATH=$HOME
 typeset -U path cdpath
 
 path+=($HOME/bin(N-/))
+path+=($HOME/.local/bin(N-/))
 path+=($HOME/.cabal/bin(N-/))
 if [ -d /usr/local/go/bin ]
 then

@@ -239,6 +239,14 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+exit-and-kill-main-tmux-session () {
+  session=$(tmux display-message -p '#S')
+  if [[ "$DESKTOP_SESSION" = "i3-gnome" && -z $VCSH_DIRECTORY && "$session" =~ ^main-.* ]]; then
+    tmux-kill-main-attached
+  fi
+}
+zshexit_functions+=( exit-and-kill-main-tmux-session )
+
 # }}}
 # Completions {{{ -------------------------------------------------------------
 
